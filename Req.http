@@ -1,0 +1,30 @@
+###create user
+POST http://localhost:4000/User-Api/users
+Content-Type: application/json
+
+{
+  "name": "Rushikesh",
+  "email": "rushi@gmail.com",
+  "dateofBirth": "2002-05-10",
+  "mobileNumber": 9876543210
+}
+###
+POST http://localhost:4000/User-Api/users
+Content-Type: application/json
+
+{
+  "name": "RushikeshBanda",
+  "email": "rushikesh@gmail.com",
+  "dateofBirth": "2003-05-10",
+  "mobileNumber": 9876543200
+}
+###read all users
+GET http://localhost:4000/User-Api/users
+###read user by id
+GET http://localhost:4000/User-Api/users/69a69937fdd08765aad4d0ed
+
+###delete user by id
+DELETE http://localhost:4000/User-Api/users/69a69937fdd08765aad4d0ed
+
+###
+PATCH  http://localhost:4000/User-Api/users/69a69937fdd08765aad4d0ed
