@@ -3,11 +3,11 @@ import Header from "./Header";
 import Footer from "./Footer";
 function RootLayout() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div>
+      <main className="flex-grow">
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </div>
   );
