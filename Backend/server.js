@@ -1,4 +1,8 @@
 import exp from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 import { connect } from "mongoose";
 import { config } from "dotenv";
 import { UserApp } from "./APIs/UserApi.js";
@@ -22,6 +26,14 @@ app.use(exp.json());
 
 // Forward req to UserAPI if path starts with /user-api
 app.use("/user-api", UserApp);
+
+// Serve built frontend static files (Vite outputs to /Frontend/dist)
+app.use(exp.static(path.join(__dirname, "..", "Frontend", "dist")));
+
+// Fallback to index.html for SPA routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "..", "Frontend", "dist", "index.html"));
+});
 
 // Connect to DB
 async function connectDB() {
