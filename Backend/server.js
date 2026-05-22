@@ -18,8 +18,10 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://user-management-app-two-zeta.vercel.app",
       "https://user-management-app-t269.onrender.com",
     ],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
 );
