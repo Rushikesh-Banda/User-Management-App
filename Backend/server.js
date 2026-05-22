@@ -20,16 +20,22 @@ app.use("/user-api", UserApp);
 
 app.use(exp.static(path.join(__dirname, "..", "Frontend", "dist")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, "..", "Frontend", "dist", "index.html"));
+app.get("/*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "..", "Frontend", "dist", "index.html")
+  );
 });
 
 async function connectDB() {
   try {
     await connect(process.env.DB_URL);
     console.log("Connected to DB");
+
     const port = process.env.PORT || 4000;
-    app.listen(port, () => console.log(`Server on port ${port}`));
+
+    app.listen(port, () =>
+      console.log(`Server on port ${port}`)
+    );
   } catch (err) {
     console.error("Error connecting to DB:", err);
   }
@@ -39,14 +45,27 @@ connectDB();
 
 app.use((err, req, res, next) => {
   console.error(err);
+
   if (err.name === "ValidationError") {
-    return res.status(400).json({ message: "Validation failed", errors: err.errors });
+    return res.status(400).json({
+      message: "Validation failed",
+      errors: err.errors,
+    });
   }
+
   if (err.name === "CastError") {
-    return res.status(400).json({ message: "Invalid ID format" });
+    return res.status(400).json({
+      message: "Invalid ID format",
+    });
   }
+
   if (err.code === 11000) {
-    return res.status(409).json({ message: "Duplicate field value" });
+    return res.status(409).json({
+      message: "Duplicate field value",
+    });
   }
-  return res.status(500).json({ message: "Internal Server Error" });
+
+  return res.status(500).json({
+    message: "Internal Server Error",
+  });
 });
