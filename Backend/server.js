@@ -20,7 +20,8 @@ app.use("/user-api", UserApp);
 
 app.use(exp.static(path.join(__dirname, "..", "Frontend", "dist")));
 
-app.get("/*", (req, res) => {
+// Fixed routing for Express 5
+app.use((req, res) => {
   res.sendFile(
     path.join(__dirname, "..", "Frontend", "dist", "index.html")
   );
@@ -29,13 +30,15 @@ app.get("/*", (req, res) => {
 async function connectDB() {
   try {
     await connect(process.env.DB_URL);
+
     console.log("Connected to DB");
 
     const port = process.env.PORT || 4000;
 
-    app.listen(port, () =>
-      console.log(`Server on port ${port}`)
-    );
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+
   } catch (err) {
     console.error("Error connecting to DB:", err);
   }
