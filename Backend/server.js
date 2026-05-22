@@ -13,20 +13,33 @@ config();
 
 const app = exp();
 
-app.use(cors({ origin: ["http://localhost:5173"] }));
+// CORS FIX
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://user-management-app-t269.onrender.com",
+    ],
+    credentials: true,
+  })
+);
+
 app.use(exp.json());
 
+// API ROUTES
 app.use("/user-api", UserApp);
 
+// STATIC FRONTEND
 app.use(exp.static(path.join(__dirname, "..", "Frontend", "dist")));
 
-// Fixed routing for Express 5
+// EXPRESS 5 ROUTING FIX
 app.use((req, res) => {
   res.sendFile(
     path.join(__dirname, "..", "Frontend", "dist", "index.html")
   );
 });
 
+// DATABASE CONNECTION
 async function connectDB() {
   try {
     await connect(process.env.DB_URL);
@@ -46,6 +59,7 @@ async function connectDB() {
 
 connectDB();
 
+// ERROR HANDLER
 app.use((err, req, res, next) => {
   console.error(err);
 
