@@ -18,9 +18,9 @@ The project demonstrates full-stack development using modern technologies and co
 
 ---
 
-# 🚀 Features
+# Features
 
-## ✅ User Management
+## User Management
 
 * Add new users
 * Display all users
@@ -28,7 +28,7 @@ The project demonstrates full-stack development using modern technologies and co
 
 ---
 
-## ✅ Frontend Development
+## Frontend Development
 
 * Reusable React components
 * Responsive UI
@@ -36,7 +36,7 @@ The project demonstrates full-stack development using modern technologies and co
 
 ---
 
-## ✅ Backend API
+## Backend API
 
 * Create REST APIs
 * Connect MongoDB database
@@ -44,14 +44,14 @@ The project demonstrates full-stack development using modern technologies and co
 
 ---
 
-## ✅ Full Stack Integration
+## Full Stack Integration
 
 * Frontend communicates with backend APIs
 * Backend stores data in MongoDB
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```bash id="l2v8n3"
 User-Management-App/
@@ -103,7 +103,7 @@ User-Management-App/
 
 ---
 
-# 📘 Technologies Used
+# Technologies Used
 
 | Technology | Purpose             |
 | ---------- | ------------------- |
@@ -117,11 +117,11 @@ User-Management-App/
 
 ---
 
-# 📌 Frontend Concepts
+# Frontend Concepts
 
 ---
 
-# 🔹 React.js
+# React.js
 
 ## Definition
 
@@ -135,7 +135,7 @@ React.js is a JavaScript library used for building dynamic user interfaces.
 
 ---
 
-# 🔹 JSX
+# JSX
 
 ## Definition
 
@@ -151,7 +151,7 @@ function App() {
 
 ---
 
-# 🔹 Components
+# Components
 
 ## Definition
 
@@ -171,7 +171,7 @@ Components are reusable UI blocks in React.
 
 ---
 
-# 🔹 Props
+# Props
 
 ## Definition
 
@@ -185,7 +185,7 @@ Props are used to pass data between components.
 
 ---
 
-# 🔹 State
+# State
 
 ## Definition
 
@@ -199,7 +199,7 @@ const [users, setUsers] = useState([]);
 
 ---
 
-# 🔹 Event Handling
+# Event Handling
 
 ## Definition
 
@@ -215,11 +215,11 @@ React handles user interactions using events.
 
 ---
 
-# 📌 Backend Concepts
+# Backend Concepts
 
 ---
 
-# 🔹 Node.js
+# Node.js
 
 ## Definition
 
@@ -227,7 +227,7 @@ Node.js is a runtime environment used to execute JavaScript outside the browser.
 
 ---
 
-# 🔹 Express.js
+# Express.js
 
 ## Definition
 
@@ -242,7 +242,7 @@ const app = express();
 
 ---
 
-# 🔹 REST API
+# REST API
 
 ## Definition
 
@@ -259,7 +259,7 @@ REST APIs enable communication between frontend and backend.
 
 ---
 
-# 🔹 MongoDB
+# MongoDB
 
 ## Definition
 
@@ -273,7 +273,7 @@ MongoDB is a NoSQL database used to store application data.
 
 ---
 
-# 🔹 Mongoose
+# Mongoose
 
 ## Definition
 
@@ -281,11 +281,11 @@ Mongoose is used for MongoDB schema modeling in Node.js.
 
 ---
 
-# 📄 Backend Files
+# Backend Files
 
 ---
 
-# 📄 UserApi.js
+# UserApi.js
 
 ## Purpose
 
@@ -299,7 +299,7 @@ Handles user-related API operations.
 
 ---
 
-# 📄 UserModel.js
+# UserModel.js
 
 ## Purpose
 
@@ -314,7 +314,7 @@ Defines schema for user data.
 
 ---
 
-# 📄 server.js
+# server.js
 
 ## Purpose
 
@@ -328,7 +328,7 @@ Main backend server file.
 
 ---
 
-# 📌 Frontend Workflow
+# Frontend Workflow
 
 ```text id="r9y6m2"
 User Interaction
@@ -348,7 +348,7 @@ UI Updated
 
 ---
 
-# 📌 Backend Workflow
+# Backend Workflow
 
 ```text id="z4x1b8"
 Client Request
@@ -364,7 +364,7 @@ Response Sent Back
 
 ---
 
-# 📌 CSS Styling
+# CSS Styling
 
 ## Purpose
 
@@ -381,7 +381,7 @@ Files:
 
 ---
 
-# 📌 Vite
+# Vite
 
 ## Definition
 
@@ -395,11 +395,11 @@ Vite is a fast frontend build tool used for React applications.
 
 ---
 
-# ▶ How to Run the Project
+# How to Run the Project
 
 ---
 
-# 🔹 Backend Setup
+# Backend Setup
 
 ## Step 1: Navigate to Backend
 
@@ -431,7 +431,7 @@ nodemon server.js
 
 ---
 
-# 🔹 Frontend Setup
+# Frontend Setup
 
 ## Step 1: Navigate to Frontend
 
@@ -465,7 +465,7 @@ http://localhost:5173
 
 ---
 
-# 📌 Environment Variables
+# Environment Variables
 
 ## `.env`
 
@@ -483,7 +483,7 @@ PORT=5000
 
 ---
 
-# 📌 API Testing
+# API Testing
 
 ## Req.http
 
@@ -496,7 +496,7 @@ Used for testing backend APIs directly.
 
 ---
 
-# 📚 Learning Outcomes
+# Learning Outcomes
 
 After completing this project, the following concepts are understood:
 
@@ -511,7 +511,7 @@ After completing this project, the following concepts are understood:
 
 ---
 
-# 🛠 Tools Used
+# Tools Used
 
 * VS Code
 * React.js
@@ -523,7 +523,7 @@ After completing this project, the following concepts are understood:
 
 ---
 
-# 📌 Real-World Use Cases
+# Real-World Use Cases
 
 | Feature          | Real-World Example      |
 | ---------------- | ----------------------- |
@@ -534,6 +534,6 @@ After completing this project, the following concepts are understood:
 
 ---
 
-# 📌 Conclusion
+# Conclusion
 
 This User Management Application demonstrates complete full-stack web development using React.js, Node.js, Express.js, and MongoDB. The project includes frontend UI development, backend API creation, database integration, and dynamic user management using modern web technologies and scalable project structure.
